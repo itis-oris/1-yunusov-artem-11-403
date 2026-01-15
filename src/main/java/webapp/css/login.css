@@ -1,0 +1,126 @@
+@font-face {
+    font-family: "Cormorant Garamond";
+    src: url("../fonts/CormorantGaramond-Regular.woff") format("woff");
+    url("../fonts/CormorantGaramond-Regular.woff2") format("woff2");
+    font-weight: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cormorant Garamond", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #F5F4F2;
+}
+
+.main__content {
+    width: 100%;
+    max-width: 2000px;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+.login {
+    width: 100%;
+    max-width: 420px;
+    background: #ffffff;
+    padding: 35px 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    text-align: center;
+}
+
+.login__title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.login__subtitle {
+    font-size: 18px;
+    opacity: 0.8;
+    margin-bottom: 28px;
+    color: #555;
+}
+
+.login__error {
+    color: #c62828;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.login__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.login__field {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 5px;
+}
+
+.login__label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #444;
+}
+
+.login__input {
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #bfbfbf;
+    font-size: 15px;
+    background: #fafafa;
+}
+
+.login__input:focus {
+    outline: none;
+    border-color: #7a7a7a;
+}
+
+.login__submit {
+    margin-top: 10px;
+    padding: 12px 0;
+    background: #333;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.login__submit:hover {
+    background: #555;
+}
+
+.login__signup-text {
+    margin-top: 20px;
+    font-size: 15px;
+    color: #444;
+}
+
+.login__signup-link {
+    color: #333;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.login__signup-link:hover {
+    opacity: 0.7;
+}

@@ -1,0 +1,157 @@
+@font-face {
+    font-family: "Cormorant Garamond";
+    src: url("../fonts/CormorantGaramond-Regular.woff") format("woff");
+    url("../fonts/CormorantGaramond-Regular.woff2") format("woff2");
+    font-weight: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cormorant Garamond", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #F5F4F2;
+}
+
+.main__content {
+    width: 100%;
+    max-width: 2000px;
+    min-height: calc(100vh - 68px);
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+    background-color: #fff;
+}
+
+.profile-section {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-section__avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.profile-section__name {
+    font-size: 38px;
+    font-weight: 700;
+    color: #333;
+}
+
+.profile-section__username {
+    font-size: 30px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.profile-section__description {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.profile-section__actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.profile-section__btn {
+    padding: 8px 18px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    transition: 0.25s ease;
+}
+
+.profile-section__btn:hover {
+    background-color: #555;
+}
+
+.profile-section__btn--logout {
+    background-color: #c62828;
+    padding: 8px 28px;
+}
+
+.profile-section__btn--logout:hover {
+    background-color: #e53935;
+}
+
+.library-section {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.library-section__tabs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+}
+
+.library-section__tab {
+    padding: 6px 12px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #333;
+    position: relative;
+    font-size: 20px;
+}
+
+.library-section__tab--active {
+    border-bottom: 3px solid #333;
+}
+
+.library-section__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.cards__card {
+    width: 280px;
+    aspect-ratio: 2 / 3;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.cards__card:hover {
+    filter: brightness(0.85);
+    transform: scale(1.05);
+}
+
+.cards__card-link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.cards__card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cards__empty {
+    font-size: 18px;
+    color: #666;
+    margin-top: 20px;
+}
