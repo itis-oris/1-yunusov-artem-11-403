@@ -1,0 +1,241 @@
+@font-face {
+    font-family: "Cormorant Garamond";
+    src: url("../fonts/CormorantGaramond-Regular.woff") format("woff");
+url("../fonts/CormorantGaramond-Regular.woff2") format("woff2");
+    font-weight: normal;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cormorant Garamond", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #F5F4F2;
+}
+
+.main__content {
+    width: 100%;
+    max-width: 2000px;
+    min-height: calc(100vh - 68px);
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+.card {
+    display: flex;
+    gap: 40px;
+    background: white;
+    max-width: 900px;
+    height: 688px;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card__left {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card__image-container {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+.card__image {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.card__left-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+
+.card__author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.card__author-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.card__author-username {
+    font-weight: bold;
+}
+
+
+.card__actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.card__action-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: none;
+    background: #fafafa;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.card__action-button:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.card__button-icon {
+    width: 28px;
+    height: 28px;
+}
+.card__action-count {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.card__right {
+    width: 266px;
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card__info {
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+.card__title {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+.card__description {
+    font-size: 18px;
+    color: #444;
+}
+
+.card__comments-section {
+    width: 100%;
+    max-height: 500px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 12px;
+}
+
+.card__comment-input {
+    position: relative;
+    width: 100%;
+}
+.card__comment-textarea {
+    width: 100%;
+    min-height: 35px;
+    padding: 6px 35px 6px 10px;
+    border-radius: 18px;
+    border: 1px solid #ccc;
+    font-size: 13px;
+    line-height: 1.3;
+    resize: none;
+    overflow: hidden;
+}
+.card__comment-send {
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 26px;
+    height: 26px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+.card__comment-send img {
+    width: 18px;
+    height: 18px;
+}
+
+.card__comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.card__comment {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-width: 100%;
+    background: #f0f0f0;
+    padding: 6px 10px;
+    border-radius: 12px;
+    word-break: break-word;
+}
+
+.card__comment-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card__comment-author {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.card__comment-avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card__comment-delete {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+.card__comment-delete-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.card__comment-text {
+    font-size: 13px;
+    line-height: 1.3;
+    color: #333;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
